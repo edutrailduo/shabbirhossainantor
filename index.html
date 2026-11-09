@@ -1,89 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080808" />
-  <meta name="description" content="Official portfolio of Antor Md Shabbir Hossain, a Business Management student and digital creator based in South Korea." />
-  <meta property="og:title" content="Antor Md Shabbir Hossain | Personal Portfolio" />
-  <meta property="og:description" content="Business Management student, digital creator and aspiring entrepreneur based in South Korea." />
-  <meta property="og:type" content="website" />
-  <title>Antor Md Shabbir Hossain — Personal Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#080808;--panel:#101010;--white:#f4f4f1;--muted:#92928d;--line:#282825;--soft:#c9c9c2;--max:1160px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Manrope,Arial,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:14px;font-weight:800;letter-spacing:.16em}.brand span{color:var(--muted)}.navlinks{display:flex;gap:30px;color:#b6b6b0;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.navlinks a:hover,.textlink:hover{color:#fff}
-    .hero{min-height:690px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:60px;padding:95px 0 110px}.eyebrow,.kicker{font:11px 'DM Mono',monospace;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}.eyebrow:before{content:"";display:inline-block;width:28px;height:1px;background:#aaa;margin:0 12px 4px 0}.hero h1{font-size:clamp(48px,7.2vw,92px);line-height:1.04;letter-spacing:-.075em;margin:25px 0 28px;font-weight:700}.hero h1 span{color:#777}.intro{max-width:590px;color:#b7b7b1;font-size:16px;line-height:1.9}.actions{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border:1px solid #e8e8e2;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:.2s}.btn.primary{background:#f1f1ec;color:#090909}.btn:hover{transform:translateY(-3px)}.btn.secondary{border-color:#444;color:#ddd}
-    .hero-side{border:1px solid var(--line);padding:18px;background:linear-gradient(145deg,#171717,#090909);min-height:470px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.portrait-frame{position:relative;flex:1;min-height:360px;background:linear-gradient(145deg,#222,#0d0d0d);display:grid;place-items:center;overflow:hidden}.portrait-frame img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 25%;filter:grayscale(100%);display:block}.portrait-fallback{font-size:clamp(100px,17vw,190px);line-height:1;font-weight:800;letter-spacing:-.12em;color:#f1f1ec}.portrait-caption{position:absolute;bottom:16px;left:16px;padding:7px 10px;background:#080808c9;color:#eee;font:9px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}.side-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font:10px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
-    section{padding:100px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:20px}.section-head h2{font-size:clamp(34px,5vw,54px);letter-spacing:-.06em;line-height:1.1;margin:13px 0 0}.section-note{max-width:300px;color:var(--muted);font-size:12px}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.about-copy{font-size:18px;line-height:1.9;color:#c5c5bf}.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.fact{background:var(--bg);padding:22px}.fact small{display:block;color:var(--muted);font:10px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}.fact strong{font-size:14px;font-weight:600}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid var(--line);padding:26px;min-height:215px;background:var(--panel);transition:.25s}.card:hover{border-color:#777;transform:translateY(-4px)}.card-num{font:11px 'DM Mono',monospace;color:#777}.card h3{font-size:20px;letter-spacing:-.04em;margin:32px 0 10px}.card p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}
-    .timeline{border-top:1px solid var(--line)}.item{display:grid;grid-template-columns:190px 1fr;gap:40px;padding:28px 0;border-bottom:1px solid var(--line)}.item time{font:11px 'DM Mono',monospace;color:var(--muted);letter-spacing:.08em}.item h3{margin:0 0 7px;font-size:18px}.item p{margin:0;color:var(--muted);font-size:13px}
-    .contact{background:#f1f1ec;color:#090909;padding:90px 0}.contact .kicker{color:#777}.contact h2{font-size:clamp(42px,7vw,82px);letter-spacing:-.075em;line-height:1.05;max-width:800px;margin:20px 0 30px}.contact-row{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid #c9c9c2;padding-top:25px}.contact .btn{background:#090909;color:#f1f1ec;border-color:#090909}.contact-mail{font-size:14px;font-weight:700}
-    footer{padding:25px 0;color:var(--muted);font:10px 'DM Mono',monospace;letter-spacing:.08em;display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;min-height:auto;padding:80px 0}.hero-side{min-height:400px}.portrait-frame{min-height:300px}.portrait-fallback{font-size:130px}.about-grid{grid-template-columns:1fr;gap:35px}.cards{grid-template-columns:1fr 1fr}.section-head{align-items:flex-start;flex-direction:column}.item{grid-template-columns:1fr;gap:10px}}
-    @media(max-width:560px){.wrap{width:min(100% - 36px,var(--max))}.nav{height:70px}.navlinks{gap:13px;font-size:9px}.navlinks a:nth-child(2){display:none}.hero h1{font-size:54px}.hero{padding:65px 0 75px}.intro{font-size:14px}.cards{grid-template-columns:1fr}section{padding:72px 0}.facts{grid-template-columns:1fr 1fr}.contact{padding:70px 0}.contact-row,footer{align-items:flex-start;flex-direction:column}}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Antor Md Shabbir Hossain — Business Management student in South Korea, digital builder and aspiring entrepreneur.">
+<meta property="og:title" content="Antor Md Shabbir Hossain">
+<meta property="og:description" content="Learning across cultures. Building ideas with purpose.">
+<meta property="og:type" content="website">
+<title>Antor Md Shabbir Hossain — Personal Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090909;--panel:#111;--paper:#f1f1eb;--muted:#92928b;--line:#292925;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:Manrope,Arial,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 52px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{font-size:15px;font-weight:800;letter-spacing:.15em}.logo span{color:#777}.nav{display:flex;gap:30px;font:10px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#b6b6af}.nav a:hover{color:white}
+.hero{padding:108px 0 96px;display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center;min-height:650px}.eyebrow,.tag{font:10px 'DM Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}.eyebrow:before{content:"";display:inline-block;width:26px;height:1px;background:#aaa;margin:0 12px 4px 0}
+h1{font-size:clamp(54px,7.4vw,96px);line-height:.99;letter-spacing:-.085em;margin:28px 0;font-weight:700}h1 span{color:#777}.lead{font-size:16px;color:#bdbdb6;max-width:590px;line-height:1.9}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;padding:14px 20px;border:1px solid #eee;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;transition:.2s}.btn.light{background:var(--paper);color:#090909}.btn:hover{transform:translateY(-3px)}.btn.ghost{border-color:#454540;color:#ddd}
+.visual{padding:16px;border:1px solid var(--line);background:linear-gradient(145deg,#181818,#0c0c0c)}.visual-top,.visual-bottom{display:flex;justify-content:space-between;color:#8d8d86;font:9px 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase}.portrait{height:405px;margin:16px 0;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#262626,#101010)}.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:grayscale(100%)}.initial{font-size:170px;font-weight:800;letter-spacing:-.12em;color:#eee}.portrait-label{position:absolute;bottom:14px;left:14px;background:#090909d9;padding:7px 10px;font:9px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:23px 0}.strip-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#aaa;font:10px 'DM Mono',monospace;letter-spacing:.13em;text-transform:uppercase}
+section{padding:100px 0;border-bottom:1px solid var(--line)}.head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:46px}.head h2{font-size:clamp(36px,5vw,58px);line-height:1.05;letter-spacing:-.07em;margin:13px 0 0}.note{max-width:320px;color:var(--muted);font-size:12px}.about{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}.about-copy{font-size:18px;color:#c5c5be;line-height:1.95;margin:0}.stats{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}.stat{padding:22px;border-bottom:1px solid var(--line)}.stat:nth-child(odd){border-right:1px solid var(--line)}.stat:nth-last-child(-n+2){border-bottom:0}.stat small{display:block;color:var(--muted);font:9px 'DM Mono',monospace;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}.stat strong{font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tile{border:1px solid var(--line);background:var(--panel);padding:27px;min-height:245px;transition:.25s}.tile:hover{border-color:#777;transform:translateY(-4px)}.num{font:10px 'DM Mono',monospace;color:#777}.tile h3{font-size:21px;letter-spacing:-.05em;margin:37px 0 10px}.tile p{font-size:12px;color:var(--muted);line-height:1.9;margin:0}.tile .micro{display:inline-block;margin-top:18px;font:9px 'DM Mono',monospace;letter-spacing:.1em;color:#ddd;text-transform:uppercase}
+.timeline{border-top:1px solid var(--line)}.entry{display:grid;grid-template-columns:200px 1fr;gap:35px;padding:27px 0;border-bottom:1px solid var(--line)}.entry time{font:10px 'DM Mono',monospace;color:var(--muted);letter-spacing:.1em}.entry h3{font-size:17px;margin:0 0 7px}.entry p{font-size:12px;color:var(--muted);margin:0;max-width:700px}
+.cta{background:var(--paper);color:#090909;padding:90px 0}.cta .tag{color:#777}.cta h2{font-size:clamp(48px,7vw,88px);letter-spacing:-.08em;line-height:1.02;margin:20px 0 28px;max-width:850px}.cta-row{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #c9c9c2;padding-top:23px}.cta .btn{background:#090909;color:#f1f1eb;border-color:#090909}.mail{font-weight:700;font-size:14px}
+footer{padding:25px 0;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font:9px 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:40px;padding:78px 0}.portrait{height:350px}.about{grid-template-columns:1fr;gap:35px}.head{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr 1fr}.entry{grid-template-columns:1fr;gap:9px}}
+@media(max-width:560px){.wrap{width:calc(100% - 36px)}header{height:70px}.nav{gap:13px;font-size:8px}.nav a:nth-child(2){display:none}.hero{padding:65px 0}.hero h1{font-size:56px}.lead{font-size:14px}.grid{grid-template-columns:1fr}section{padding:72px 0}.cta{padding:70px 0}.cta-row,footer{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:1fr 1fr}.portrait{height:320px}}
+</style>
 </head>
 <body>
-  <header class="wrap nav">
-    <a class="brand" href="#top">ANTOR<span>.</span></a>
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#focus">Focus</a><a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <main id="top">
-    <div class="wrap hero">
-      <div>
-        <div class="eyebrow">Personal portfolio · South Korea</div>
-        <h1>Antor Md<br>Shabbir<br><span>Hossain.</span></h1>
-        <p class="intro">Business Management student, digital creator and aspiring entrepreneur. I’m interested in building useful ideas, learning across cultures and turning ambition into meaningful work.</p>
-        <div class="actions"><a class="btn primary" href="#contact">Get in touch ↗</a><a class="btn secondary" href="#about">Explore portfolio</a></div>
-      </div>
-      <aside class="hero-side" aria-label="Portrait of Antor Md Shabbir Hossain">
-        <div class="kicker">AMSH / 01 — PROFILE</div>
-        <div class="portrait-frame"><div class="portrait-fallback">A.</div><img src="assets/antor.jpg" alt="Portrait of Antor Md Shabbir Hossain" onerror="this.remove()" /><div class="portrait-caption">Antor Md Shabbir Hossain</div></div>
-        <div class="side-bottom"><span>Curiosity · Consistency</span><span>Seoul, KR</span></div>
-      </aside>
-    </div>
-    <section id="about"><div class="wrap">
-      <div class="section-head"><div><div class="kicker">01 / About</div><h2>A little about me.</h2></div><p class="section-note">Learning, creating and growing through new experiences.</p></div>
-      <div class="about-grid">
-        <p class="about-copy">I’m Antor Md Shabbir Hossain, a bachelor’s student in Business Management in South Korea. My journey brings together education, hospitality experience and a growing interest in digital projects and entrepreneurship. I value practical learning, clear communication and steady progress.</p>
-        <div class="facts">
-          <div class="fact"><small>Based in</small><strong>South Korea</strong></div>
-          <div class="fact"><small>Education</small><strong>Bachelor’s Student</strong></div>
-          <div class="fact"><small>Field</small><strong>Business Management</strong></div>
-          <div class="fact"><small>Languages</small><strong>Bangla · English · Korean</strong></div>
-        </div>
-      </div>
-    </div></section>
-    <section id="focus"><div class="wrap">
-      <div class="section-head"><div><div class="kicker">02 / What I do</div><h2>Areas of focus.</h2></div><p class="section-note">A mix of hands-on experience and long-term interests.</p></div>
-      <div class="cards">
-        <article class="card"><div class="card-num">01 — BUSINESS</div><h3>Business & Management</h3><p>Exploring business operations, customer experience and the foundations of building sustainable ventures.</p></article>
-        <article class="card"><div class="card-num">02 — DIGITAL</div><h3>Digital Projects</h3><p>Developing ideas for useful online platforms, educational resources and digital experiences.</p></article>
-        <article class="card"><div class="card-num">03 — COMMUNICATION</div><h3>People & Service</h3><p>Building practical communication, teamwork and customer-service skills through real work experience.</p></article>
-      </div>
-    </div></section>
-    <section id="experience"><div class="wrap">
-      <div class="section-head"><div><div class="kicker">03 / Experience</div><h2>Where I’ve learned.</h2></div><p class="section-note">Practical roles that have shaped my work ethic and adaptability.</p></div>
-      <div class="timeline">
-        <article class="item"><time>HOSPITALITY · SOUTH KOREA</time><div><h3>Kitchen Team Member</h3><p>Restaurant operations, food preparation, kitchen coordination and maintaining a clean, organized workspace.</p></div></article>
-        <article class="item"><time>HOSPITALITY · SOUTH KOREA</time><div><h3>Kitchen Assistant</h3><p>Supported daily kitchen workflow, opening and closing routines, preparation and dishwashing.</p></div></article>
-        <article class="item"><time>TRAVEL · BANGLADESH</time><div><h3>Travel Consultant & Customer Service</h3><p>Customer communication and service support in a travel and tourism environment.</p></div></article>
-      </div>
-    </div></section>
-    <section class="contact" id="contact"><div class="wrap">
-      <div class="kicker">04 / Contact</div>
-      <h2>Have an idea?<br>Let’s connect.</h2>
-      <div class="contact-row"><a class="contact-mail" href="mailto:antormdshabbirhossain@gmail.com">antormdshabbirhossain@gmail.com</a><a class="btn" href="mailto:antormdshabbirhossain@gmail.com">Send an email ↗</a></div>
-    </div></section>
-  </main>
-  <footer class="wrap"><span>© <span id="year"></span> ANTOR MD SHABBIR HOSSAIN</span><span>DESIGNED WITH PURPOSE · SOUTH KOREA</span></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+<header class="wrap"><a class="logo" href="#top">ANTOR<span>.</span></a><nav class="nav"><a href="#about">About</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav></header>
+<main id="top">
+<div class="wrap hero">
+<div><div class="eyebrow">Business student · Digital builder · South Korea</div><h1>Ideas into<br>action<span>.</span></h1><p class="lead">I’m Antor Md Shabbir Hossain. A Business Management student based in South Korea, exploring the space between education, digital projects and entrepreneurship. I’m here to learn, build and make useful things happen.</p><div class="actions"><a class="btn light" href="#contact">Let’s connect ↗</a><a class="btn ghost" href="#projects">Explore my work</a></div></div>
+<aside class="visual"><div class="visual-top"><span>AMSH / 001</span><span>Personal profile</span></div><div class="portrait"><div class="initial">A.</div><img src="assets/antor.jpg" alt="Portrait of Antor Md Shabbir Hossain" onerror="this.remove()"><div class="portrait-label">Antor Md Shabbir Hossain</div></div><div class="visual-bottom"><span>Bangladesh → Korea</span><span>Learning in motion</span></div></aside>
+</div>
+<div class="strip"><div class="wrap strip-inner"><span>Based in South Korea</span><span>Business Management</span><span>Bangla · English · Korean</span><span>Building for what’s next</span></div></div>
+<section id="about"><div class="wrap"><div class="head"><div><div class="tag">01 / The person</div><h2>Curious by nature.<br>Practical by choice.</h2></div><p class="note">A cross-cultural journey shaped by education, hands-on work and a drive to create.</p></div><div class="about"><p class="about-copy">I’m a bachelor’s student in Business Management in South Korea. My experience spans customer service, travel and hospitality, while my interests are growing into digital education and entrepreneurship. I believe in learning by doing, communicating clearly and improving one step at a time.</p><div class="stats"><div class="stat"><small>Currently</small><strong>Undergraduate student</strong></div><div class="stat"><small>Based in</small><strong>South Korea</strong></div><div class="stat"><small>Academic field</small><strong>Business Management</strong></div><div class="stat"><small>Languages</small><strong>Bangla · English · Korean</strong></div></div></div></div></section>
+<section id="projects"><div class="wrap"><div class="head"><div><div class="tag">02 / Selected projects</div><h2>Building beyond<br>the classroom.</h2></div><p class="note">Early-stage ideas and projects that reflect my interests in learning, commerce and digital experiences.</p></div><div class="grid">
+<article class="tile"><div class="num">01 — EDUCATION</div><h3>EduTrail Duo</h3><p>A bilingual education platform concept sharing practical guidance about studying in South Korea, universities, scholarships and student life.</p><span class="micro">Education · Digital platform</span></article>
+<article class="tile"><div class="num">02 — COMMERCE</div><h3>KORDESH</h3><p>An emerging commerce concept focused on bringing authentic Korean products closer to customers in Bangladesh.</p><span class="micro">Brand concept · E-commerce</span></article>
+<article class="tile"><div class="num">03 — PERSONAL</div><h3>Learning in public</h3><p>Documenting ideas, lessons and experiences from studying, working and building a life across cultures.</p><span class="micro">Content · Personal growth</span></article>
+</div></div></section>
+<section id="journey"><div class="wrap"><div class="head"><div><div class="tag">03 / Experience</div><h2>Experience that<br>keeps me moving.</h2></div><p class="note">Different environments. One consistent focus: learning, responsibility and people.</p></div><div class="timeline">
+<article class="entry"><time>SOUTH KOREA · HOSPITALITY</time><div><h3>Restaurant Kitchen Team</h3><p>Supporting daily restaurant operations, food preparation, teamwork and maintaining an organized kitchen environment.</p></div></article>
+<article class="entry"><time>SOUTH KOREA · HOSPITALITY</time><div><h3>Kitchen Assistant</h3><p>Assisted with kitchen preparation, opening and closing routines, dishwashing and day-to-day workflow.</p></div></article>
+<article class="entry"><time>BANGLADESH · TRAVEL</time><div><h3>Travel Consultant & Customer Service</h3><p>Supported customers in a travel and tourism setting, developing communication and service skills.</p></div></article>
+<article class="entry"><time>EDUCATION · SOUTH KOREA</time><div><h3>Bachelor’s in Business Management</h3><p>Developing a foundation in business, management and the practical thinking needed to build future ventures.</p></div></article>
+</div></div></section>
+<section><div class="wrap"><div class="head"><div><div class="tag">04 / What drives me</div><h2>Three things I keep<br>coming back to.</h2></div></div><div class="grid">
+<article class="tile"><div class="num">01</div><h3>Useful ideas</h3><p>Turning problems and observations into practical projects that can help real people.</p></article>
+<article class="tile"><div class="num">02</div><h3>Continuous learning</h3><p>Staying open to new skills, cultures and perspectives, then putting what I learn into practice.</p></article>
+<article class="tile"><div class="num">03</div><h3>Meaningful connections</h3><p>Working with people, understanding different needs and creating value through collaboration.</p></article>
+</div></div></section>
+<section class="cta" id="contact"><div class="wrap"><div class="tag">05 / Get in touch</div><h2>Good things start<br>with a conversation.</h2><div class="cta-row"><a class="mail" href="mailto:antormdshabbirhossain@gmail.com">antormdshabbirhossain@gmail.com</a><a class="btn" href="mailto:antormdshabbirhossain@gmail.com">Send me a message ↗</a></div></div></section>
+</main>
+<footer class="wrap"><span>© <span id="year"></span> Antor Md Shabbir Hossain</span><span>South Korea · Bangladesh · Global</span></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body></html>
